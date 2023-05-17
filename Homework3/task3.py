@@ -1,6 +1,6 @@
 # Дан список. Найдите сумму элементом с четными индексами
 
-
+from statistics import mean
 def even_sum(lst):
     # Здесь пишем код
     a = lst[0:: 2]
