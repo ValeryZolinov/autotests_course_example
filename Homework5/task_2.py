@@ -8,14 +8,17 @@
 def repeats(our_str):
     # Здесь нужно написать код
     new_str = {}
-    for i in our_str:   # Для каждого символа слова
-        if i in new_str:    # Если этот символ находится в словаре
-            new_str[i] += 1     # Прибавим 1 к счетчику
-            print(f'{i}_{new_str[i]}', end='')      # Выведем бувку_счетчик из словаря
+    result = ""
+    for i in our_str:                               # Для каждого символа слова
+        if i in new_str:                            # Если этот символ находится в словаре
+            new_str[i] += 1                         # Прибавим 1 к счетчику
+            #print(f'{i}_{new_str[i]}', end='')
+            result += f'{i}_{new_str[i]}'
         else:
-            new_str[i] = 1      # Если не было в словаре, то оставим 1
-            print(f'{i}_1', end='')
-    return new_str
+            new_str[i] = 1                          # Если не было в словаре, то оставим 1
+            #print(f'{i}_1', end='')
+            result += f'{i}_1'
+    return result
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

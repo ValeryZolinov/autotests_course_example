@@ -21,12 +21,14 @@
 def everything_for_your_cat(cats_data):
     # Здесь нужно написать код
     our_str = {}
+    result = ""
     for cat in cats_data:
-        temp = cat[0] + ', ' + str(cat[1])
-        our_str.setdefault(cat[2:], []).append(temp)
+        temp = cat[0] + ', ' + str(cat[1])              # Возьмем имя кошки, возраст
+        our_str.setdefault(cat[2:], []).append(temp)    # Возьмем имя хозяина, добавим в temp
     for k, v in our_str.items():
-        print(' '.join(k) + ':', '; '.join(v))
-    return our_str
+        our_str = ' '.join(k) + ':' + ' ' + '; '.join(v)
+        result += f'{our_str}\n'
+    return result
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
